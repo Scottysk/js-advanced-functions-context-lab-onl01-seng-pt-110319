@@ -51,7 +51,11 @@ function createTimeOutEvent(dateStamp) {
   this.timeOutEvents.push({
     type: "TimeOut",
     hour: parseInt(hour, 10),
+<<<<<<< HEAD
     date: date
+=======
+    date
+>>>>>>> 4b13a4a023dbce7effcbaa441020d36488ae2394
   });
   return this;
 }
@@ -65,16 +69,25 @@ function hoursWorkedOnDate(dateStamp) {
 }
 
 function wagesEarnedOnDate(dateStamp) {
+<<<<<<< HEAD
   let wage = hoursWorkedOnDate.call(this, dateStamp) * this.payPerHour;
+=======
+  let wage = hoursWorkedOnDate.call(this, date) * this.payPerHour;
+>>>>>>> 4b13a4a023dbce7effcbaa441020d36488ae2394
   return wage;
 }
   
 function findEmployeeByFirstName(srcArray, firstName) {
+<<<<<<< HEAD
   return srcArray.find(function(name) {
+=======
+  return collection.find(function(name) {
+>>>>>>> 4b13a4a023dbce7effcbaa441020d36488ae2394
     return name.firstName === firstName;
   });
 }
 
+<<<<<<< HEAD
 
 
 function calculatePayroll(arr) {
@@ -84,3 +97,10 @@ function calculatePayroll(arr) {
 }
 
 
+=======
+function calculatePayRoll(arr) {
+  return arr.reduce(function(amount, record) {
+    return amount + allWagesfor.call(record);
+  }, 0);
+}
+>>>>>>> 4b13a4a023dbce7effcbaa441020d36488ae2394
